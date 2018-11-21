@@ -198,7 +198,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 #install squid3
 apt-get -y install squid3
-wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/rizal180499/Auto-Installer-VPS/master/conf/squid3.conf"
+wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/iberi22/updatingVPSscrips/master/squidconfgperonal/squid3.conf"
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
 
