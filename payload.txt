@@ -1,15 +1,5 @@
-.claro.com.br
-.claro.com.sv
-.facebook.net
-.netclaro.com.br
-.speedtest.net
-.tim.com.br
-.vivo.com.br
-.oi.com.br 
-.m.claroseguridad.com
-.bancodobrasil.com.br
-.minhaclaro.claro.com.br
-.clarosync.com 
+
+.clarosync.com
 .site2unblock.com
 www.tigo.com.co
 access.tigo.com.co
