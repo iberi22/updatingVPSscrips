@@ -10,8 +10,6 @@ sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 # install wget and curl
 apt-get update;apt-get -y install wget curl;
 
-# set time GMT +7
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # set locale
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
@@ -29,16 +27,17 @@ apt-get -y --purge remove sendmail*;
 apt-get -y --purge remove bind9*;
 
 # update
-apt-get update; apt-get -y upgrade;
+apt-get update; apt-get  upgrade;
 
 # install webserver
-apt-get -y install nginx php5-fpm php5-cli
+apt-get  install nginx php5-fpm php5-cli
 
 # install essential package
 apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs openvpn vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
 apt-get -y install build-essential
 
-# disable exim
+# disable eximhttp://
+
 service exim4 stop
 sysv-rc-conf exim4 off
 
@@ -197,7 +196,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 #install squid3
-apt-get -y install squid3
+apt-get install squid3
 wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/iberi22/updatingVPSscrips/master/squidconfgperonal/squid3.conf"
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart

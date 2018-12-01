@@ -16,7 +16,7 @@ visible_hostname VPS_TEST_s4m@beri
 # CACHE CONFIGURACIONTEST1 SQUID4.4
 #disable cache descomentar # cache deny all
 #cache deny all
-cache_mem 2400 MB
+cache_mem 1000 MB
 memory_cache_mode always
 maximum_object_size_in_memory 32 KB
 maximum_object_size 1024 MB
