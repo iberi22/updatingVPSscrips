@@ -264,3 +264,18 @@ clamscan -r --remove /home/USER
 
 *To see more options:
 clamscan --help
+
+mysql:::::::
+
+CREATE USER 'ubuntu'@'localhost' IDENTIFIED BY '';
+GRANT ALL PRIVILEGES ON *.* TO 'ubuntu'@'localhost';
+UPDATE user SET plugin='auth_socket' WHERE User='ubuntu';
+UPDATE user SET plugin='unix_socket' WHERE User='ubuntu';
+
+CREATE USER 'iberi'@'103.128.03.53' IDENTIFIED BY 'root1234234';
+GRANT ALL PRIVILEGES ON *.* TO 'asd'@'103.128.03.53' IDENTIFIED BY 'root1234234';
+mysql --host='103.128.03.53' --user=iberi --password
+:::cambiar las reglas del firewall
+$ gcloud compute firewall-rules create "mysql-remote-access" --allow tcp:3306 --source-tags "mysql-client" --target-tags "mysql-server"
+pass sqlserver dedicado user: root1234234:pass:asdasdasd
+mysql -h  103.128.03.53 -u root -p
